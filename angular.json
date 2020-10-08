@@ -181,12 +181,6 @@
               "customWebpackConfig": {
                 "path": "webpack.config.other.ts"
               },
-              "fileReplacements": [
-                {
-                  "replace": "projects/module/src/environments/environment.ts",
-                  "with": "projects/module/src/environments/environment.prod.ts"
-                }
-              ],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,

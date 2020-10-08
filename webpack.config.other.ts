@@ -7,5 +7,6 @@ export default (config: webpack.Configuration) => {
       manifest: require('./dist/manifest.json'),
     })
   );
+  config.optimization.runtimeChunk = false;
   return config;
 };
