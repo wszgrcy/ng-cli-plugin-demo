@@ -179,7 +179,7 @@
           "configurations": {
             "production": {
               "customWebpackConfig": {
-                "path": "./webpack.config.other.ts"
+                "path": "webpack.config.other.ts"
               },
               "fileReplacements": [
                 {
