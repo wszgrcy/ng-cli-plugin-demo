@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "serve": "http-server ./dist/ng-cli-plugin -g -b",
+    "serve": "npx http-server ./dist/ng-cli-plugin",
     "build:other": "ng build module --prod"
   },
   "private": true,

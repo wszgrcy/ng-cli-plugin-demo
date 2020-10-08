@@ -1,6 +1,6 @@
 import * as webpack from 'webpack';
 import * as path from 'path';
-import { setNgDllPlugin } from './plugins/helper';
+import { setNgDllPlugin } from 'webpack-ng-dll-plugin';
 export default (config: webpack.Configuration, options) => {
   setNgDllPlugin(
     config,
