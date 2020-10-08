@@ -13,7 +13,7 @@ export default (config: webpack.Configuration, options) => {
         name: 'TLIB',
         format: true,
         filter: {
-          mode: 'auto',
+          mode: 'full',
         },
       },
     },

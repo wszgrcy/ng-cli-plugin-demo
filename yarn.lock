@@ -8913,6 +8913,11 @@ webpack-merge@4.2.2, webpack-merge@^4.2.2:
   dependencies:
     lodash "^4.17.15"
 
+webpack-ng-dll-plugin@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/webpack-ng-dll-plugin/-/webpack-ng-dll-plugin-1.0.0.tgz#57b3785e2230c37729728545423c0405e12875ab"
+  integrity sha512-4YN43LGWQ3RgU+q4coxi6L89Q4QLqzr9A450Afb/XShFvtFzdLXlqqFmWzCfv45mh2UwazUa9j/yF0sbJ8MVNQ==
+
 webpack-sources@1.4.3, webpack-sources@^1.1.0, webpack-sources@^1.2.0, webpack-sources@^1.3.0, webpack-sources@^1.4.0, webpack-sources@^1.4.1, webpack-sources@^1.4.3:
   version "1.4.3"
   resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-1.4.3.tgz#eedd8ec0b928fbf1cbfe994e22d2d890f330a933"

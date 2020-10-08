@@ -9,8 +9,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "serve": "http-server ./dist/ng-cli-plugin",
-    "build:other":"ng build module --prod"
+    "serve": "http-server ./dist/ng-cli-plugin -g -b",
+    "build:other": "ng build module --prod"
   },
   "private": true,
   "dependencies": {
@@ -27,6 +27,7 @@
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
+    "webpack-ng-dll-plugin": "1.0.0",
     "@angular-builders/custom-webpack": "^10.0.1",
     "@angular-devkit/build-angular": "~0.1001.4",
     "@angular/cli": "~10.1.4",
