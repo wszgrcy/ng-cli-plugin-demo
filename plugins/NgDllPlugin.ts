@@ -5,7 +5,7 @@ const asyncLib = require('neo-async');
 
 import DllEntryPlugin from 'webpack/lib/DllEntryPlugin';
 
-interface NgDllPluginOptions {
+export interface NgDllPluginOptions {
   filter?: NgFilterPluginOptions;
   path: string;
   name: string;
