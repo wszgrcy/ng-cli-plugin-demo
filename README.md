@@ -1,27 +1,15 @@
 # NgCliPlugin
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.4.
+## 演示
+- 直接启动`dist/ng-cli-plugin`的项目可以看结果
 
-## Development server
+## dll构建
+- `npm run dll` 生成在`dist/dll`
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## 远程组件构建
+- `npm run build:other` 生成在`dist/module`
+> 草创未达到完美状态
+## 主项目构建
+- `npm run build`
+## 手动启动
+- dll构建后构建主项目,然后将`dll.js`复制到`ng-cli-plugin`启动
