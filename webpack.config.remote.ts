@@ -1,5 +1,6 @@
 import * as webpack from 'webpack';
 import * as path from 'path';
+import { LoadModuleMainTemplatePlugin } from './plugins/LoadModuleMainTemplatePlugin';
 export default (config: webpack.Configuration, options) => {
   delete options.index;
 
@@ -13,8 +14,9 @@ export default (config: webpack.Configuration, options) => {
     })
   );
   config.optimization.runtimeChunk = false;
-  config.output.libraryTarget = 'jsonp';
-  config.output.library = 'Remote';
+  // config.output.libraryTarget = 'var';
+  // config.output.library = 'Remote';
   config.output.filename = 'Remote.js';
+  config.plugins.push(new LoadModuleMainTemplatePlugin());
   return config;
 };
