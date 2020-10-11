@@ -25,6 +25,20 @@
             "scripts": []
           },
           "configurations": {
+            "serve": {
+              "aot": false,
+              "polyfills": "src/polyfills.ts",
+              "customWebpackConfig": {
+                "path": "./webpack.config.build.ts"
+              },
+              "assets": [
+                "src/favicon.ico",
+                "src/assets"
+              ],
+              "styles": [
+                "src/styles.scss"
+              ]
+            },
             "production": {
               "polyfills": "src/polyfills.ts",
               "customWebpackConfig": {
@@ -106,6 +120,9 @@
           "configurations": {
             "production": {
               "browserTarget": "ng-cli-plugin:build:production"
+            },
+            "serve": {
+              "browserTarget": "ng-cli-plugin:build:serve"
             }
           }
         },
@@ -179,7 +196,7 @@
           "configurations": {
             "production": {
               "customWebpackConfig": {
-                "path": "webpack.config.other.ts"
+                "path": "webpack.config.remote.ts"
               },
               "optimization": true,
               "outputHashing": "all",

@@ -13,8 +13,8 @@ export default (config: webpack.Configuration, options) => {
     })
   );
   config.optimization.runtimeChunk = false;
-  config.output.libraryTarget = 'var';
-  config.output.library = 'OtherModule';
-  config.output.filename = 'OtherModule.js';
+  config.output.libraryTarget = 'jsonp';
+  config.output.library = 'Remote';
+  config.output.filename = 'Remote.js';
   return config;
 };

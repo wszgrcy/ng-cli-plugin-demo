@@ -3,14 +3,14 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --configuration serve",
     "dll": "ng build --configuration dll ",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "serve": "npx http-server ./dist/ng-cli-plugin",
-    "build:other": "ng build module --prod"
+    "build:remote": "ng build module --prod"
   },
   "private": true,
   "dependencies": {

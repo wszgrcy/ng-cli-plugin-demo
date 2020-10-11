@@ -19,8 +19,6 @@ export class AppComponent {
     private viewContainerRef: ViewContainerRef
   ) {}
   ngOnInit(): void {
-    const load = (window as any).OtherModule;
-    const factory = this.cfr.resolveComponentFactory(load.OtherComponent);
-    this.viewContainerRef.createComponent(factory, null, this.injector);
+
   }
 }

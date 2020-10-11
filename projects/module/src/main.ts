@@ -11,5 +11,5 @@ enableProdMode();
 // platformBrowserDynamic().bootstrapModule(AppModule)
 //   .catch(err => console.error(err));
 
-export { OtherModule } from './app/other.module';
-export { OtherComponent } from './app/other.component';
+export { RemoteComponent } from './remote/remote.component';
+export { RemoteModule } from './remote/remote.module';
