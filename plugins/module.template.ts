@@ -5,7 +5,7 @@ function getDefaultModuleName(name = ''): string {
   return name.split(/(\/|\\)/g).pop();
 }
 /** 载入远程模块,项目中使用 */
-function loadRemoteModule(url: string, moduleName: string): Promise<any> {
+function loadRemoteModule(url: string, moduleName?: string): Promise<any> {
   !moduleName && (moduleName = getDefaultModuleName(url));
   if (loadedRemoteModuleMap[moduleName]) {
     return loadedRemoteModuleMap[moduleName];

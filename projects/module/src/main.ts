@@ -11,5 +11,5 @@
 // platformBrowserDynamic().bootstrapModule(AppModule)
 //   .catch(err => console.error(err));
 
-export { RemoteComponent } from './remote/remote.component';
-export { RemoteModule } from './remote/remote.module';
+export { RemoteComponent as component } from './remote/remote.component';
+export { RemoteModule as module } from './remote/remote.module';

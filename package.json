@@ -10,7 +10,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "serve": "npx http-server ./dist/ng-cli-plugin",
-    "build:remote": "ng build module --prod"
+    "build:remote": "ng build module --prod",
+    "build:remote2": "ng build module2 --prod"
   },
   "private": true,
   "dependencies": {

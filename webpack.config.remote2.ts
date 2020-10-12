@@ -15,7 +15,7 @@ export default (config: webpack.Configuration, options) => {
   config.optimization.runtimeChunk = false;
   // config.output.libraryTarget = 'var';
   // config.output.library = 'Remote';
-  config.output.filename = 'Remote.js';
+  config.output.filename = 'Remote2.js';
   config.plugins.push(new RemoteModuleMainTemplatePlugin());
   return config;
 };
