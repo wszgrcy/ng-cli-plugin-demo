@@ -1,7 +1,7 @@
 let loadedRemoteModuleMap: { [name: string]: Promise<any> } = {};
 /** 加载时的map */
-let loadingRemoteModuleMap: { [name: string]: Function } = {};
-function getDefaultModuleName(name = '') {
+let loadingRemoteModuleMap: { [name: string]: (param) => void } = {};
+function getDefaultModuleName(name = ''): string {
   return name.split(/(\/|\\)/g).pop();
 }
 /** 载入远程模块,项目中使用 */
@@ -10,8 +10,8 @@ function loadRemoteModule(url: string, moduleName: string): Promise<any> {
   if (loadedRemoteModuleMap[moduleName]) {
     return loadedRemoteModuleMap[moduleName];
   }
-  let resolve: Function;
-  let reject: Function;
+  let resolve: (param) => void;
+  let reject: (param) => void;
   const promise = new Promise((res, rej) => {
     resolve = res;
     reject = rej;
@@ -26,7 +26,7 @@ function loadRemoteModule(url: string, moduleName: string): Promise<any> {
 function loadRemoteModuleJsonpCallback(
   name: string,
   module: { [name: string]: any }
-) {
+): void {
   if (loadingRemoteModuleMap[name]) {
     loadingRemoteModuleMap[name](module);
     delete loadingRemoteModuleMap[name];
@@ -41,8 +41,7 @@ function requireEnsure(url, rej, name) {
   script.charset = 'utf-8';
   (script as any).timeout = 120;
   script.src = url;
-  // var error = new Error();
-  onScriptComplete = function(event) {
+  onScriptComplete = (event) => {
     script.onerror = script.onload = null;
     clearTimeout(timeout);
     if (event.type === 'timout') {
@@ -53,7 +52,7 @@ function requireEnsure(url, rej, name) {
     } else if (event.type === 'error') {
       rej({
         type: event.type,
-        message: `Loading remote module ${name}:${url} failed`,
+        message: `Loading remote module [${name}]:[${url}] failed`,
       });
     }
   };
@@ -61,6 +60,6 @@ function requireEnsure(url, rej, name) {
   const timeout = setTimeout(() => {
     onScriptComplete({ type: 'timeout', target: script });
   }, 120000);
-  script.onerror = script.onload = onScriptComplete;
+  script.onerror = onScriptComplete;
   document.head.appendChild(script);
 }
