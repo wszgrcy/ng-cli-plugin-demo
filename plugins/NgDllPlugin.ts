@@ -152,7 +152,7 @@ class NgFilterPlugin {
         module.dependencies.forEach((dependency) => {
           if (
             dependency.request &&
-            /(^(@angular(\/|\\)(core|common|router|platform-browser))$)|rxjs/.test(
+            /(^(@angular(\/|\\)(core|common|router|platform-browser|forms))$)|rxjs/.test(
               dependency.request
             ) &&
             dependency.id
