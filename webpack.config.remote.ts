@@ -1,6 +1,6 @@
 import * as webpack from 'webpack';
 import * as path from 'path';
-import { LoadModuleMainTemplatePlugin } from './plugins/LoadModuleMainTemplatePlugin';
+import { RemoteModuleMainTemplatePlugin } from './plugins/LoadModuleMainTemplatePlugin';
 export default (config: webpack.Configuration, options) => {
   delete options.index;
 
@@ -17,6 +17,6 @@ export default (config: webpack.Configuration, options) => {
   // config.output.libraryTarget = 'var';
   // config.output.library = 'Remote';
   config.output.filename = 'Remote.js';
-  config.plugins.push(new LoadModuleMainTemplatePlugin());
+  config.plugins.push(new RemoteModuleMainTemplatePlugin());
   return config;
 };

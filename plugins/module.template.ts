@@ -1,17 +1,14 @@
-let loadModuleMap = new Map<string, Promise<any>>();
+let loadedRemoteModuleMap: { [name: string]: Promise<any> } = {};
 /** 加载时的map */
-let loadingMap = new Map<string, Function>();
+let loadingRemoteModuleMap: { [name: string]: Function } = {};
 function getDefaultModuleName(name = '') {
-  return name
-    .split(/(\/|\\)/g)
-    .pop()
-    .split('.')[0];
+  return name.split(/(\/|\\)/g).pop();
 }
 /** 载入远程模块,项目中使用 */
 function loadRemoteModule(url: string, moduleName: string): Promise<any> {
   !moduleName && (moduleName = getDefaultModuleName(url));
-  if (loadModuleMap.has(moduleName)) {
-    return loadModuleMap.get(moduleName);
+  if (loadedRemoteModuleMap[moduleName]) {
+    return loadedRemoteModuleMap[moduleName];
   }
   let resolve: Function;
   let reject: Function;
@@ -19,28 +16,26 @@ function loadRemoteModule(url: string, moduleName: string): Promise<any> {
     resolve = res;
     reject = rej;
   });
-  loadModuleMap.set(moduleName, promise);
+  loadedRemoteModuleMap[moduleName] = promise;
   // todo moduleName设置默认名
-  loadingMap.set(moduleName, resolve);
-  requireEnsure(url, reject);
+  loadingRemoteModuleMap[moduleName] = resolve;
+  requireEnsure(url, reject, moduleName);
   return promise;
 }
 /** 远程模块加载后调用 */
-function loadRemoteModuleJsonpCallBack(
+function loadRemoteModuleJsonpCallback(
   name: string,
   module: { [name: string]: any }
 ) {
-  if (loadModuleMap.has(name)) {
-    loadingMap.get(name)(module);
-    loadingMap.delete(name);
+  if (loadingRemoteModuleMap[name]) {
+    loadingRemoteModuleMap[name](module);
+    delete loadingRemoteModuleMap[name];
   }
 }
-// tslint:disable-next-line: no-string-literal
-window['loadRemoteModule'] = loadRemoteModule;
-// tslint:disable-next-line: no-string-literal
-window['loadRemoteModuleJsonpCallBack'] = loadRemoteModuleJsonpCallBack;
+window.loadRemoteModule = loadRemoteModule;
+window.loadRemoteModuleJsonpCallback = loadRemoteModuleJsonpCallback;
 /** 请求资源 */
-function requireEnsure(url, rej) {
+function requireEnsure(url, rej, name) {
   const script = document.createElement('script');
   let onScriptComplete;
   script.charset = 'utf-8';
@@ -48,7 +43,6 @@ function requireEnsure(url, rej) {
   script.src = url;
   // var error = new Error();
   onScriptComplete = function(event) {
-    console.log('完成/失败', event);
     script.onerror = script.onload = null;
     clearTimeout(timeout);
     if (event.type === 'timout') {
@@ -59,25 +53,12 @@ function requireEnsure(url, rej) {
     } else if (event.type === 'error') {
       rej({
         type: event.type,
-        message: `${url}`,
+        message: `Loading remote module ${name}:${url} failed`,
       });
     }
-    // var chunk = installedChunks[url];
-    // if (chunk !== 0) {
-    //   if (chunk) {
-    //     var errorType = event && (event.type === 'load' ? 'missing' : event.type);
-    //     var realSrc = event && event.target && event.target.src;
-    //     error.message = 'Loading chunk ' + url + ' failed.\n(' + errorType + ': ' + realSrc + ')';
-    //     error.name = 'ChunkLoadError';
-    //     error.type = errorType;
-    //     error.request = realSrc;
-    //     chunk[1](error);
-    //   }
-    //   installedChunks[url] = undefined;
-    // }
   };
   // 超时状态
-  const timeout = setTimeout(function() {
+  const timeout = setTimeout(() => {
     onScriptComplete({ type: 'timeout', target: script });
   }, 120000);
   script.onerror = script.onload = onScriptComplete;

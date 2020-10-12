@@ -1,12 +1,9 @@
 import webpack from 'webpack';
 const { ConcatSource } = require('webpack-sources');
 import { SyncWaterfallHook } from 'tapable';
-export class LoadModuleMainTemplatePlugin {
-  varExpression = '';
-  copyObject = false;
+export class RemoteModuleMainTemplatePlugin {
+  varExpression = 'loadRemoteModuleJsonpCallback';
   constructor() {
-    // this.varExpression = varExpression;
-    // this.copyObject = copyObject;
   }
   apply(compiler: webpack.Compiler) {
     compiler.hooks.thisCompilation.tap('加入模块载入', (compilation) => {
@@ -17,17 +14,8 @@ export class LoadModuleMainTemplatePlugin {
     const { mainTemplate, chunkTemplate } = compilation;
 
     const onRenderWithEntry = (source, chunk, hash) => {
-      compilation;
-      //   const varExpression = (mainTemplate as any).getAssetPath(
-      //     this.varExpression,
-      //     {
-      //       hash,
-      //       chunk,
-      //     }
-      //   );
-
       return new ConcatSource(
-        `loadRemoteModuleJsonpCallBack('${compilation.outputOptions.filename}',`,
+        `loadRemoteModuleJsonpCallback('${compilation.outputOptions.filename}',`,
         source,
         `)`
       );
@@ -35,13 +23,13 @@ export class LoadModuleMainTemplatePlugin {
 
     for (const template of [mainTemplate, chunkTemplate]) {
       ((template as any).hooks.renderWithEntry as SyncWaterfallHook).tap(
-        'SetVarMainTemplatePlugin',
+        'RemoteModuleMainTemplatePlugin',
         onRenderWithEntry
       );
     }
 
     (mainTemplate.hooks as any).globalHashPaths.tap(
-      'SetVarMainTemplatePlugin',
+      'RemoteModuleMainTemplatePlugin',
       (paths) => {
         if (this.varExpression) {
           paths.push(this.varExpression);
@@ -49,10 +37,8 @@ export class LoadModuleMainTemplatePlugin {
         return paths;
       }
     );
-    mainTemplate.hooks.hash.tap('SetVarMainTemplatePlugin', (hash) => {
-      hash.update('set var');
-      hash.update(`${this.varExpression}`);
-      hash.update(`${this.copyObject}`);
+    mainTemplate.hooks.hash.tap('RemoteModuleMainTemplatePlugin', (hash) => {
+      hash.update(`set remote module ${this.varExpression}`);
     });
   }
 }
