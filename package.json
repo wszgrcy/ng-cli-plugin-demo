@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "serve": "npx http-server ./dist/ng-cli-plugin",
+    "serve": "npx http-server ./dist/ng-cli-plugin -g -b",
     "build:remote": "ng build module --prod",
     "build:remote2": "ng build module2 --prod"
   },
@@ -28,7 +28,7 @@
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
-    "webpack-ng-dll-plugin": "1.0.0",
+    "webpack-ng-dll-plugin": "1.0.1",
     "@angular-builders/custom-webpack": "^10.0.1",
     "@angular-devkit/build-angular": "~0.1001.4",
     "@angular/cli": "~10.1.4",

@@ -1,6 +1,6 @@
 import * as webpack from 'webpack';
 import * as path from 'path';
-import { RemoteModuleMainTemplatePlugin } from './plugins/LoadModuleMainTemplatePlugin';
+import { RemoteModuleMainTemplatePlugin } from 'webpack-ng-dll-plugin';
 export default (config: webpack.Configuration, options) => {
   delete options.index;
 
