@@ -31,26 +31,26 @@
               "customWebpackConfig": {
                 "path": "./webpack.config.build.ts"
               },
-              "assets": [
-                "src/favicon.ico",
-                "src/assets"
-              ],
-              "styles": [
-                "src/styles.scss"
-              ]
+              "assets": ["src/favicon.ico", "src/assets"],
+              "styles": ["src/styles.scss"]
             },
             "production": {
+              "index": {"input":"src/index.dll.html","output":"index.html"},
               "polyfills": "src/polyfills.ts",
               "customWebpackConfig": {
                 "path": "./webpack.config.build.ts"
               },
               "assets": [
                 "src/favicon.ico",
-                "src/assets"
+                "src/assets",
+                {
+                  "glob": "dll.js",
+                  "input": "./dist/dll",
+                  "output": "./"
+                }
               ],
-              "styles": [
-                "src/styles.scss"
-              ],
+              "styles": ["src/styles.scss"],
+
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -139,13 +139,8 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss"],
             "scripts": []
           }
         },
@@ -157,9 +152,7 @@
               "tsconfig.spec.json",
               "e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
@@ -249,9 +242,7 @@
               "projects/module/src/favicon.ico",
               "projects/module/src/assets"
             ],
-            "styles": [
-              "projects/module/src/styles.css"
-            ],
+            "styles": ["projects/module/src/styles.css"],
             "scripts": []
           }
         },
@@ -263,9 +254,7 @@
               "projects/module/tsconfig.spec.json",
               "projects/module/e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
@@ -283,5 +272,8 @@
       }
     }
   },
-  "defaultProject": "ng-cli-plugin"
+  "defaultProject": "ng-cli-plugin",
+  "cli": {
+    "analytics": "b9a634ff-466c-445a-bbca-313d2256c0ea"
+  }
 }
