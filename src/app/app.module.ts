@@ -3,16 +3,27 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    RouterModule.forRoot([
+      // {
+      //   path: 'remote',
+      //   loadChildren: () => {
+      //     return (window as any).loadRemoteModule('./Remote.js').then((e) => {
+      //       console.log(e);
+      //       return e.RemoteModule;
+      //     });
+      //   },
+      // },
+    ]),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

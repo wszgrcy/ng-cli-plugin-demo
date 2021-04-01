@@ -1,15 +1,15 @@
-import { enableProdMode } from '@angular/core';
+// import { enableProdMode } from '@angular/core';
 // import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 // import { AppModule } from './app/app.module';
 // import { environment } from './environments/environment';
 
 // if (environment.production) {
-enableProdMode();
+// enableProdMode();
 // }
 
 // platformBrowserDynamic().bootstrapModule(AppModule)
 //   .catch(err => console.error(err));
 
-export { OtherModule } from './app/other.module';
-export { OtherComponent } from './app/other.component';
+export { RemoteComponent as component } from './remote/remote.component';
+export { RemoteModule as module } from './remote/remote.module';

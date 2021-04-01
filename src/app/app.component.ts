@@ -5,6 +5,7 @@ import {
   Injector,
   ViewContainerRef,
 } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -13,14 +14,22 @@ import {
 })
 export class AppComponent {
   title = 'ng-cli-plugin';
+  routerUrl = '';
+  routerPath = '';
   constructor(
     private injector: Injector,
     @Inject(ComponentFactoryResolver) private cfr: ComponentFactoryResolver,
-    private viewContainerRef: ViewContainerRef
+    private viewContainerRef: ViewContainerRef,
+    private router: Router
   ) {}
-  ngOnInit(): void {
-    const load = (window as any).OtherModule;
-    const factory = this.cfr.resolveComponentFactory(load.OtherComponent);
-    this.viewContainerRef.createComponent(factory, null, this.injector);
+  ngOnInit(): void {}
+  reset() {
+    this.router.resetConfig([
+      {
+        path: this.routerPath,
+        loadChildren: () =>
+          loadRemoteModule(this.routerUrl).then((e) => e.module),
+      },
+    ]);
   }
 }

@@ -38,6 +38,89 @@
         ]
       }
     },
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js": {
+      "id": "3Pt+",
+      "buildMeta": {
+        "exportsType": "namespace",
+        "providedExports": [
+          "AbstractControl",
+          "AbstractControlDirective",
+          "AbstractFormGroupDirective",
+          "COMPOSITION_BUFFER_MODE",
+          "CheckboxControlValueAccessor",
+          "CheckboxRequiredValidator",
+          "ControlContainer",
+          "DefaultValueAccessor",
+          "EmailValidator",
+          "FormArray",
+          "FormArrayName",
+          "FormBuilder",
+          "FormControl",
+          "FormControlDirective",
+          "FormControlName",
+          "FormGroup",
+          "FormGroupDirective",
+          "FormGroupName",
+          "FormsModule",
+          "MaxLengthValidator",
+          "MinLengthValidator",
+          "NG_ASYNC_VALIDATORS",
+          "NG_VALIDATORS",
+          "NG_VALUE_ACCESSOR",
+          "NgControl",
+          "NgControlStatus",
+          "NgControlStatusGroup",
+          "NgForm",
+          "NgModel",
+          "NgModelGroup",
+          "NgSelectOption",
+          "NumberValueAccessor",
+          "PatternValidator",
+          "RadioControlValueAccessor",
+          "RangeValueAccessor",
+          "ReactiveFormsModule",
+          "RequiredValidator",
+          "SelectControlValueAccessor",
+          "SelectMultipleControlValueAccessor",
+          "VERSION",
+          "Validators",
+          "ɵInternalFormsSharedModule",
+          "ɵNgNoValidate",
+          "ɵNgSelectMultipleOption",
+          "ɵangular_packages_forms_forms_a",
+          "ɵangular_packages_forms_forms_b",
+          "ɵangular_packages_forms_forms_ba",
+          "ɵangular_packages_forms_forms_bb",
+          "ɵangular_packages_forms_forms_bc",
+          "ɵangular_packages_forms_forms_bd",
+          "ɵangular_packages_forms_forms_be",
+          "ɵangular_packages_forms_forms_c",
+          "ɵangular_packages_forms_forms_d",
+          "ɵangular_packages_forms_forms_e",
+          "ɵangular_packages_forms_forms_f",
+          "ɵangular_packages_forms_forms_g",
+          "ɵangular_packages_forms_forms_h",
+          "ɵangular_packages_forms_forms_i",
+          "ɵangular_packages_forms_forms_j",
+          "ɵangular_packages_forms_forms_k",
+          "ɵangular_packages_forms_forms_l",
+          "ɵangular_packages_forms_forms_m",
+          "ɵangular_packages_forms_forms_n",
+          "ɵangular_packages_forms_forms_o",
+          "ɵangular_packages_forms_forms_p",
+          "ɵangular_packages_forms_forms_q",
+          "ɵangular_packages_forms_forms_r",
+          "ɵangular_packages_forms_forms_s",
+          "ɵangular_packages_forms_forms_t",
+          "ɵangular_packages_forms_forms_u",
+          "ɵangular_packages_forms_forms_v",
+          "ɵangular_packages_forms_forms_w",
+          "ɵangular_packages_forms_forms_x",
+          "ɵangular_packages_forms_forms_y",
+          "ɵangular_packages_forms_forms_z"
+        ]
+      }
+    },
     "./node_modules/rxjs/_esm2015/internal/util/ArgumentOutOfRangeError.js": {
       "id": "4I5i",
       "buildMeta": {
@@ -450,6 +533,15 @@
         "exportsType": "namespace",
         "providedExports": [
           "isPromise"
+        ]
+      }
+    },
+    "./node_modules/rxjs/_esm2015/internal/observable/forkJoin.js": {
+      "id": "cp0P",
+      "buildMeta": {
+        "exportsType": "namespace",
+        "providedExports": [
+          "forkJoin"
         ]
       }
     },
