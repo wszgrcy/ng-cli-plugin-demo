@@ -12,16 +12,16 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     FormsModule,
     RouterModule.forRoot([
-      // {
-      //   path: 'remote',
-      //   loadChildren: () => {
-      //     return (window as any).loadRemoteModule('./Remote.js').then((e) => {
-      //       console.log(e);
-      //       return e.RemoteModule;
-      //     });
-      //   },
-      // },
-    ]),
+// {
+//   path: 'remote',
+//   loadChildren: () => {
+//     return (window as any).loadRemoteModule('./Remote.js').then((e) => {
+//       console.log(e);
+//       return e.RemoteModule;
+//     });
+//   },
+// },
+], { relativeLinkResolution: 'legacy' }),
   ],
   providers: [],
   bootstrap: [AppComponent],
