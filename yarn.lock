@@ -9345,10 +9345,10 @@ webpack-merge@5.7.3, webpack-merge@^5.7.3:
     clone-deep "^4.0.1"
     wildcard "^2.0.0"
 
-webpack-ng-dll-plugin@1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/webpack-ng-dll-plugin/-/webpack-ng-dll-plugin-1.0.2.tgz#a72723fbf26e917374d62f31022fd6c1f5b31c58"
-  integrity sha512-uqeSQxAiLRb52NMPAqE+nvh5U9JYCoZMItDTu2hWwr3FhEds3isvF2KmfQmanMLmNVUAjDf3eQ1FuFK99gDqgQ==
+webpack-ng-dll-plugin@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/webpack-ng-dll-plugin/-/webpack-ng-dll-plugin-2.0.0.tgz#6f688d2397ec7e2a234bb263b403c559a1eb522b"
+  integrity sha512-aUNTxuZ0GohT3JLuo+eRVy7tdK9EqN8hTtTXf42ItqtPAW2WymLeOPQVgtuIo+KBGVSAQXRqpZ8WcVDoGKu4Wg==
 
 webpack-sources@2.2.0:
   version "2.2.0"
