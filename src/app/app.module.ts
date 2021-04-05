@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { MainService } from './main.service';
+import { ShowInMainModule } from './show-in-main';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -26,6 +27,7 @@ import { MainService } from './main.service';
       ],
       { relativeLinkResolution: 'legacy' }
     ),
+    ShowInMainModule
   ],
   providers: [MainService],
   bootstrap: [AppComponent],
