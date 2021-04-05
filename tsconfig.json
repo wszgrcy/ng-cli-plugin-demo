@@ -17,6 +17,9 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@main/main.service":["./src/app/main.service"]
+    }
   }
 }
