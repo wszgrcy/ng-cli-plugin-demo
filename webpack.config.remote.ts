@@ -1,7 +1,7 @@
 import * as webpack from 'webpack';
 import * as path from 'path';
 import { RemoteModuleMainTemplatePlugin } from 'webpack-ng-dll-plugin';
-import { NgRedirectModulePlugin } from 'webpack-ng-dll-plugin';
+import { NgNamedImportPlugin } from 'webpack-ng-dll-plugin';
 export default (config: webpack.Configuration, options) => {
   delete options.index;
 
@@ -19,10 +19,7 @@ export default (config: webpack.Configuration, options) => {
   config.output.filename = 'Remote.js';
   config.plugins.push(new RemoteModuleMainTemplatePlugin());
   config.plugins.push(
-    new NgRedirectModulePlugin(
-      [path.join(__dirname, './src/app')],
-      'mainModule'
-    )
+    new NgNamedImportPlugin([path.join(__dirname, './src/app')])
   );
   return config;
 };

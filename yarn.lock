@@ -210,6 +210,13 @@
   resolved "https://registry.yarnpkg.com/@angular/compiler/-/compiler-9.0.0.tgz#87e0bef4c369b6cadae07e3a4295778fc93799d5"
   integrity sha512-ctjwuntPfZZT2mNj2NDIVu51t9cvbhl/16epc5xEwyzyDt76pX9UgwvY+MbXrf/C/FWwdtmNtfP698BKI+9leQ==
 
+"@angular/compiler@^11.0.7":
+  version "11.2.9"
+  resolved "https://registry.yarnpkg.com/@angular/compiler/-/compiler-11.2.9.tgz#0814dc1145e26c148718773f22979c6c472da2e9"
+  integrity sha512-EelccCc6Xgrz6UzoJU5EqrRc0CGDHS82cheiBP3lSDfjG6borD9al4DN5lfphp+FCmTpLY33wQ3jqhPwC02FMQ==
+  dependencies:
+    tslib "^2.0.0"
+
 "@angular/compiler@~11.2.8":
   version "11.2.8"
   resolved "https://registry.yarnpkg.com/@angular/compiler/-/compiler-11.2.8.tgz#106f2e940e6a50cdf3be0b14071e00e3dd4db55c"
@@ -3285,6 +3292,11 @@ css-what@^3.2.1:
   resolved "https://registry.yarnpkg.com/css-what/-/css-what-3.4.1.tgz#81cb70b609e4b1351b1e54cbc90fd9c54af86e2e"
   integrity sha512-wHOppVDKl4vTAOWzJt5Ek37Sgd9qq1Bmj/T1OjvicWbU5W7ru7Pqbn0Jdqii3Drx/h+dixHKXNhZYx7blthL7g==
 
+css-what@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/css-what/-/css-what-4.0.0.tgz#35e73761cab2eeb3d3661126b23d7aa0e8432233"
+  integrity sha512-teijzG7kwYfNVsUh2H/YN62xW3KK9YhXEgSlbxMlcyjPNvdKJqFx5lrwlJgoFP1ZHlB89iGDlo/JyshKeRhv5A==
+
 css@^2.0.0:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/css/-/css-2.2.4.tgz#c646755c73971f2bba6a601e2cf2fd71b1298929"
@@ -3400,6 +3412,15 @@ cyclist@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/cyclist/-/cyclist-1.0.1.tgz#596e9698fd0c80e12038c2b82d6eb1b35b6224d9"
   integrity sha1-WW6WmP0MgOEgOMK4LW6xs1tiJNk=
+
+cyia-code-util@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/cyia-code-util/-/cyia-code-util-1.0.4.tgz#235724c03f24e050b8ad3b7c8a5a6489369e7e99"
+  integrity sha512-aju/mWwLzRORxfKrjHmeqAT6o5/6IJCWCmXt59DKpwhhfmpVavU5JrrxAIl4prOypsFWVtWEIycocuiYh0hElg==
+  dependencies:
+    "@angular/compiler" "^11.0.7"
+    css-what "^4.0.0"
+    inquirer "^7.3.3"
 
 d@1, d@^1.0.1:
   version "1.0.1"
@@ -4978,7 +4999,7 @@ ini@^1.3.4:
   resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.5.tgz#eee25f56db1c9ec6085e0c22778083f596abf927"
   integrity sha512-RZY5huIKCMRWDUqZlEi72f/lmXKMvuszcMBduliQ3nnWbx9X/ZBQO7DijMEYS9EhHBb2qacRUMtC7svLwe0lcw==
 
-inquirer@7.3.3:
+inquirer@7.3.3, inquirer@^7.3.3:
   version "7.3.3"
   resolved "https://registry.yarnpkg.com/inquirer/-/inquirer-7.3.3.tgz#04d176b2af04afc157a83fd7c100e98ee0aad003"
   integrity sha512-JG3eIAj5V9CwcGvuOmoo6LB9kbAYT8HXffUl6memuszlwDC/qvFAJw49XJ5NROSFNPxp3iQg1GqkFhaY/CR0IA==
@@ -9345,10 +9366,12 @@ webpack-merge@5.7.3, webpack-merge@^5.7.3:
     clone-deep "^4.0.1"
     wildcard "^2.0.0"
 
-webpack-ng-dll-plugin@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/webpack-ng-dll-plugin/-/webpack-ng-dll-plugin-2.0.0.tgz#6f688d2397ec7e2a234bb263b403c559a1eb522b"
-  integrity sha512-aUNTxuZ0GohT3JLuo+eRVy7tdK9EqN8hTtTXf42ItqtPAW2WymLeOPQVgtuIo+KBGVSAQXRqpZ8WcVDoGKu4Wg==
+webpack-ng-dll-plugin@2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/webpack-ng-dll-plugin/-/webpack-ng-dll-plugin-2.0.3.tgz#c41ac0abd986da9445a3ae4c5974e6576d672b9b"
+  integrity sha512-Jw412OlI7kElyQiJg1cIpLyXNfZ8S1feZfxgv+kmZWyyJo/HJeR4wsRCFgRIc6ccqu9f6CgceQw2vf55h0RLhw==
+  dependencies:
+    cyia-code-util "^1.0.4"
 
 webpack-sources@2.2.0:
   version "2.2.0"

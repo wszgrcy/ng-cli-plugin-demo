@@ -8,6 +8,3 @@ import { ShowInMainComponent } from './show-in-main.component';
   exports: [ShowInMainComponent],
 })
 export class ShowInMainModule {}
-(window as any).mainModule = (window as any).mainModule || {};
-(window as any).mainModule.ShowInMainModule = ShowInMainModule;
-(window as any).mainModule.ShowInMainComponent = ShowInMainComponent;
