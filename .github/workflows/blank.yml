@@ -28,7 +28,7 @@ jobs:
           cmd: install # will run `yarn install` command
       - name: build
         run: |
-          npm run deploy
+          yarn deploy
           cp -rp dist/ng-cli-plugin/ ../dist
           git branch gh-pages
           git checkout gh-pages
