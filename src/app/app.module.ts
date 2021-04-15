@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { MainService } from './main.service';
 import { ShowInMainModule } from './show-in-main';
+import { environment } from '../environments/environment';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -15,19 +16,19 @@ import { ShowInMainModule } from './show-in-main';
     FormsModule,
     RouterModule.forRoot(
       [
-        // {
-        //   path: 'remote',
-        //   loadChildren: () => {
-        //     return (window as any).loadRemoteModule('./Remote.js').then((e) => {
-        //       console.log(e);
-        //       return e.RemoteModule;
-        //     });
-        //   },
-        // },
+        {
+          path: 'sub1',
+          loadChildren: () => {
+            return fetch(`${environment.sub1Prefix}bootstrap.json`)
+              .then((item) => item.json())
+              .then((res) => loadRemoteModuleManifest(res))
+              .then((item) => item.module);
+          },
+        },
       ],
       { relativeLinkResolution: 'legacy' }
     ),
-    ShowInMainModule
+    ShowInMainModule,
   ],
   providers: [MainService],
   bootstrap: [AppComponent],
