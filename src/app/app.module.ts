@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { MainService } from './main.service';
 import { ShowInMainModule } from './show-in-main';
+import { environment } from '../environments/environment';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -18,7 +19,7 @@ import { ShowInMainModule } from './show-in-main';
         {
           path: 'sub1',
           loadChildren: () => {
-            return fetch('http://127.0.0.1:4201/bootstrap.json')
+            return fetch(`${environment.sub1Prefix}bootstrap.json`)
               .then((item) => item.json())
               .then((res) => loadRemoteModuleManifest(res))
               .then((item) => item.module);

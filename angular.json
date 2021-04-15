@@ -64,6 +64,21 @@
                 "path": "./webpack.config.center-dll.ts"
               }
             },
+            "center-dll-prod": {
+              "outputPath": "dist/center-dll",
+              "vendorChunk": false,
+              "assets": [],
+              "styles": [],
+              "customWebpackConfig": {
+                "path": "./webpack.config.center-dll.ts"
+              },
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "buildOptimizer": true
+            },
             "center-main": {
               "vendorChunk": false,
               "index": {
@@ -80,6 +95,47 @@
               "customWebpackConfig": {
                 "path": "./webpack.config.center-main.ts"
               }
+            },
+            "center-main-prod": {
+              "vendorChunk": false,
+              "index": {
+                "input": "src/index.center-dll.html",
+                "output": "index.html"
+              },
+              "assets": [
+                {
+                  "glob": "dll.js",
+                  "input": "./dist/center-dll",
+                  "output": "./"
+                }
+              ],
+              "customWebpackConfig": {
+                "path": "./webpack.config.center-main.ts"
+              },
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
             }
           }
         },
@@ -190,6 +246,7 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
+              "deployUrl": "sub1/",
               "budgets": [
                 {
                   "type": "initial",
