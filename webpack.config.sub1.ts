@@ -17,7 +17,7 @@ export default (config: webpack.Configuration, options) => {
     })
   );
   config.output.jsonpFunction = 'sub1Jsonp'
-  config.output.filename = 'sub1.[name].js';
+  config.output.filename = 'sub1.[name].[hash:20].js';
   config.plugins.push(new RemoteModuleMainTemplatePlugin());
   config.plugins.push(
     new NgNamedImportPlugin(
