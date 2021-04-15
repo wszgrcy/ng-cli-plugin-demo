@@ -3,7 +3,7 @@ name: CI
 on:
   push:
     branches:
-      - master
+      - main
 env:
   REPOSITORY_PATH: https://${{secrets.ACCESS_TOKEN}}@github.com/
   # GITHUB_TOKEN: ${{secrets.ACCESS_TOKEN}}
