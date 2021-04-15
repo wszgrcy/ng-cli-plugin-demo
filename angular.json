@@ -97,6 +97,7 @@
               }
             },
             "center-main-prod": {
+              "baseHref": "/ng-cli-plugin-demo/",
               "vendorChunk": false,
               "index": {
                 "input": "src/index.center-dll.html",
@@ -246,7 +247,7 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "deployUrl": "sub1/",
+              "deployUrl": "/ng-cli-plugin-demo/sub1/",
               "budgets": [
                 {
                   "type": "initial",
