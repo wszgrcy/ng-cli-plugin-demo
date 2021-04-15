@@ -1,15 +1,2 @@
-<p>主项目</p>
-<a [routerLink]="[routerPath]">点击跳转</a>
-<form action="">
-  <div>
-    <label for="">路由路径</label>
-    <input type="text" [(ngModel)]="routerPath" />
-  </div>
-  <div>
-    <label for="">路由模块地址</label>
-    <input type="text" [(ngModel)]="routerUrl" />
-  </div>
-  <button (click)="reset()">设置路由</button>
-</form>
-<p>出口</p>
+<a [routerLink]="['/sub1']">sub1</a>
 <router-outlet></router-outlet>

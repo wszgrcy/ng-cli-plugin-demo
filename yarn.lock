@@ -133,12 +133,32 @@
     rxjs "6.6.3"
     source-map "0.7.3"
 
+"@angular-devkit/core@11.2.9", "@angular-devkit/core@^11.2.7":
+  version "11.2.9"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-11.2.9.tgz#c00cd6e3a6d7803eab85476063f296cd93e6004d"
+  integrity sha512-TqihgUEKjX4C1hSd8RgUyCwuezFRdput9Ctcq8c4VgOcseEnXq3BkCSJbXtUh4Fln8WPxM7WHM8HClcWya/41g==
+  dependencies:
+    ajv "6.12.6"
+    fast-json-stable-stringify "2.1.0"
+    magic-string "0.25.7"
+    rxjs "6.6.3"
+    source-map "0.7.3"
+
 "@angular-devkit/schematics@11.2.7":
   version "11.2.7"
   resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-11.2.7.tgz#a78730a6d7d4242c69e1b87fef5d880a016b8748"
   integrity sha512-cnORKnyVtsdVZ180ZZyrmCMeSH1IGK2apfgGGW3UaUZvTAtolQPrqT0RQUK8qLF/RC85xy9QYXApiAaLDUixIw==
   dependencies:
     "@angular-devkit/core" "11.2.7"
+    ora "5.3.0"
+    rxjs "6.6.3"
+
+"@angular-devkit/schematics@11.2.9", "@angular-devkit/schematics@^11.2.7":
+  version "11.2.9"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-11.2.9.tgz#1b580cf6f3933fec676c201d2723eb4b9b92b11f"
+  integrity sha512-NqcBMK9ZbfXykj+2/cSlZcLVmbep/N+yYb+dUSfvRup3rW3uYSpMMJAnys3ro0m7TnUrI7h7t0UTgX8oxjlCow==
+  dependencies:
+    "@angular-devkit/core" "11.2.9"
     ora "5.3.0"
     rxjs "6.6.3"
 
@@ -1465,6 +1485,15 @@
   dependencies:
     "@angular-devkit/core" "11.2.7"
     "@angular-devkit/schematics" "11.2.7"
+    jsonc-parser "3.0.0"
+
+"@schematics/angular@^11.2.7":
+  version "11.2.9"
+  resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-11.2.9.tgz#20fc03b38ebbabe443075a4e751910aeee3e7f57"
+  integrity sha512-yiuWCf+naAaS8cib2a9KKAhkwLx4LVnxE4lpF1Q2mEE5znQ7npYwzQYxgMHD70eMuSrki/L5nM9s7ZdVr5OKyg==
+  dependencies:
+    "@angular-devkit/core" "11.2.9"
+    "@angular-devkit/schematics" "11.2.9"
     jsonc-parser "3.0.0"
 
 "@schematics/update@0.1102.7":
@@ -5555,7 +5584,7 @@ json5@^2.1.2:
   dependencies:
     minimist "^1.2.5"
 
-jsonc-parser@3.0.0:
+jsonc-parser@3.0.0, jsonc-parser@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/jsonc-parser/-/jsonc-parser-3.0.0.tgz#abdd785701c7e7eaca8a9ec8cf070ca51a745a22"
   integrity sha512-fQzRfAbIBnR0IQvftw9FJveWiHp72Fg20giDrHz6TdfB12UH/uue0D3hm57UB5KgAVuniLMCaS8P1IMj9NR7cA==
@@ -6255,6 +6284,18 @@ next-tick@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
   integrity sha1-yobR/ogoFpsBICCOPchCS524NCw=
+
+ngx-center@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/ngx-center/-/ngx-center-0.0.2.tgz#4ab59e0efe6efc0bd228aaecf50c129bb1882e42"
+  integrity sha512-AaB+UAuXBVhJ0x5oHB8VqVFP8YE3u2maPr4GlZdBLePgSqX2FMbB6i1d5W6blvMM1g7B2OAn9aCbEerhs++ZMA==
+  dependencies:
+    "@angular-devkit/core" "^11.2.7"
+    "@angular-devkit/schematics" "^11.2.7"
+    "@schematics/angular" "^11.2.7"
+    cyia-code-util "^1.0.4"
+    jsonc-parser "^3.0.0"
+    typescript "^4.2.3"
 
 nice-try@^1.0.4:
   version "1.0.5"
@@ -9018,6 +9059,11 @@ typescript@4.1.5:
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.1.5.tgz#123a3b214aaff3be32926f0d8f1f6e704eb89a72"
   integrity sha512-6OSu9PTIzmn9TCDiovULTnET6BgXtDYL4Gg4szY+cGsc3JP1dQL8qvE8kShTRx1NIw4Q9IBHlwODjkjWEtMUyA==
 
+typescript@^4.2.3:
+  version "4.2.4"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.2.4.tgz#8610b59747de028fda898a8aef0e103f156d0961"
+  integrity sha512-V+evlYHZnQkaz8TRBuxTA92yZBPotr5H+WhQ7bD3hZUndx5tGOa1fuCgeSjxAzM1RiN5IzvadIXTVefuuwZCRg==
+
 typescript@~4.0.2:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.0.3.tgz#153bbd468ef07725c1df9c77e8b453f8d36abba5"
@@ -9300,6 +9346,11 @@ webdriver-manager@^12.1.7:
     semver "^5.3.0"
     xml2js "^0.4.17"
 
+webpack-bootstrap-assets-plugin@1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/webpack-bootstrap-assets-plugin/-/webpack-bootstrap-assets-plugin-1.0.8.tgz#9a611598e0f0f83644fdbf8f44ffc22d8c11f40a"
+  integrity sha512-sfwKOmMCAbWWJ0EDFVQp1jU9V6zNWmVNR3zvbOCQXXiKKJyY+95cS+c7BFUg73MMflRhip7ip5IVlpeucHk4Bg==
+
 webpack-dev-middleware@3.7.2, webpack-dev-middleware@^3.7.2:
   version "3.7.2"
   resolved "https://registry.yarnpkg.com/webpack-dev-middleware/-/webpack-dev-middleware-3.7.2.tgz#0019c3db716e3fa5cecbf64f2ab88a74bab331f3"
@@ -9366,10 +9417,10 @@ webpack-merge@5.7.3, webpack-merge@^5.7.3:
     clone-deep "^4.0.1"
     wildcard "^2.0.0"
 
-webpack-ng-dll-plugin@2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/webpack-ng-dll-plugin/-/webpack-ng-dll-plugin-2.0.3.tgz#c41ac0abd986da9445a3ae4c5974e6576d672b9b"
-  integrity sha512-Jw412OlI7kElyQiJg1cIpLyXNfZ8S1feZfxgv+kmZWyyJo/HJeR4wsRCFgRIc6ccqu9f6CgceQw2vf55h0RLhw==
+webpack-ng-dll-plugin@2.0.7:
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/webpack-ng-dll-plugin/-/webpack-ng-dll-plugin-2.0.7.tgz#908c02e0a6294e374d3db462e2958848d596ba5b"
+  integrity sha512-aoZ0iu8OSpxQlwUNR8k3QOj6zGyfVImtgttmDK4LGXeNOCiQtYGPjPamxOqHB1OGAIEhDog6fpD3TfvAB1RNyg==
   dependencies:
     cyia-code-util "^1.0.4"
 

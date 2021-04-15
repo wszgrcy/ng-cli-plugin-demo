@@ -15,19 +15,19 @@ import { ShowInMainModule } from './show-in-main';
     FormsModule,
     RouterModule.forRoot(
       [
-        // {
-        //   path: 'remote',
-        //   loadChildren: () => {
-        //     return (window as any).loadRemoteModule('./Remote.js').then((e) => {
-        //       console.log(e);
-        //       return e.RemoteModule;
-        //     });
-        //   },
-        // },
+        {
+          path: 'sub1',
+          loadChildren: () => {
+            return fetch('http://127.0.0.1:4201/bootstrap.json')
+              .then((item) => item.json())
+              .then((res) => loadRemoteModuleManifest(res))
+              .then((item) => item.module);
+          },
+        },
       ],
       { relativeLinkResolution: 'legacy' }
     ),
-    ShowInMainModule
+    ShowInMainModule,
   ],
   providers: [MainService],
   bootstrap: [AppComponent],

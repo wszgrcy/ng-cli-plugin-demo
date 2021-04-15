@@ -3,15 +3,15 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --configuration serve",
-    "dll": "ng build --configuration dll ",
-    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "serve": "npx http-server ./dist/ng-cli-plugin -g -b",
-    "build:remote": "ng build module --prod",
-    "build:remote2": "ng build module2 --prod"
+    "start:center-main": "ng serve --configuration center-main --port 4300",
+    "build:center-main": "ng build --configuration center-main",
+    "build:center-dll": "ng build --configuration center-dll",
+    "build:sub1": "ng build sub1",
+    "start:sub1": "ng serve sub1"
   },
   "private": true,
   "dependencies": {
@@ -28,7 +28,6 @@
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
-    "webpack-ng-dll-plugin": "2.0.3",
     "@angular-builders/custom-webpack": "^11.1.1",
     "@angular-devkit/build-angular": "~0.1102.7",
     "@angular/cli": "~11.2.7",
@@ -46,10 +45,13 @@
     "karma-coverage-istanbul-reporter": "~3.0.2",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
+    "ngx-center": "^0.0.2",
     "protractor": "~7.0.0",
     "source-map-explorer": "^2.5.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
-    "typescript": "~4.0.2"
+    "typescript": "~4.0.2",
+    "webpack-bootstrap-assets-plugin": "1.0.8",
+    "webpack-ng-dll-plugin": "2.0.7"
   }
 }
