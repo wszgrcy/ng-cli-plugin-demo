@@ -1,4 +1,4 @@
-# NgCliPlugin
+# NgCliPluginDemo
 
 ## 简介
 
