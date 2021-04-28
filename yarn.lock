@@ -3526,6 +3526,15 @@ cyia-code-util@^1.0.4:
     css-what "^4.0.0"
     inquirer "^7.3.3"
 
+cyia-code-util@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/cyia-code-util/-/cyia-code-util-1.0.6.tgz#0a25e39921b08d98a3be4926657bae3583d34d51"
+  integrity sha512-ApD00n3icHDQn98A8JKXCzcIfZWmX7qygZ9OI9jxICcvNhEJGSRtgqS2CJ/Sy1pHrm/9agb9egiKDmNJ6eBuXw==
+  dependencies:
+    "@angular/compiler" "^11.0.7"
+    css-what "^4.0.0"
+    inquirer "^7.3.3"
+
 d@1, d@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/d/-/d-1.0.1.tgz#8698095372d58dbee346ffd0c7093f99f8f9eb5a"
@@ -9689,12 +9698,12 @@ webpack-merge@5.7.3, webpack-merge@^5.7.3:
     clone-deep "^4.0.1"
     wildcard "^2.0.0"
 
-webpack-ng-dll-plugin@2.0.8:
-  version "2.0.8"
-  resolved "https://registry.yarnpkg.com/webpack-ng-dll-plugin/-/webpack-ng-dll-plugin-2.0.8.tgz#50a8f114148bba6fc3da5726ee046d5b4eb944e9"
-  integrity sha512-YOJ2GVSka0X0sB3mPMGkWNupQTcg7TuRNLKTwyEOi0xcYqjfK1yEFz3jXzuyNiSTlz/FDKhFPS1U5KKN61WWNA==
+webpack-ng-dll-plugin@2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/webpack-ng-dll-plugin/-/webpack-ng-dll-plugin-2.1.1.tgz#828af6c5365c58c49dd28370a50e22c0125f506b"
+  integrity sha512-IidtiVtiEWqHlqVUduydEudsxoTMSmTD4A2MfOc7XXFR67wyV5dpy/NIXq4WChR0wHnLTLt/mqNA3NHyeEZNkQ==
   dependencies:
-    cyia-code-util "^1.0.4"
+    cyia-code-util "^1.0.6"
 
 webpack-sources@2.2.0:
   version "2.2.0"

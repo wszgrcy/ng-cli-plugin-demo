@@ -1,7 +1,7 @@
 import * as webpack from 'webpack';
 import * as path from 'path';
 import {
-  RemoteModuleMainTemplatePlugin,
+  LoadRemoteModulePlugin,
   NgNamedImportPlugin,
 } from 'webpack-ng-dll-plugin';
 import { BootstrapAssetsPlugin } from 'webpack-bootstrap-assets-plugin';
@@ -18,7 +18,7 @@ export default (config: webpack.Configuration, options) => {
   );
   config.output.jsonpFunction = 'sub1Jsonp'
   config.output.filename = 'sub1.[name].[hash:20].js';
-  config.plugins.push(new RemoteModuleMainTemplatePlugin());
+  config.plugins.push(new LoadRemoteModulePlugin());
   config.plugins.push(
     new NgNamedImportPlugin(
       [path.join(__dirname, 'src')]
