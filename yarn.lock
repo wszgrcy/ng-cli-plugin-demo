@@ -9698,10 +9698,10 @@ webpack-merge@5.7.3, webpack-merge@^5.7.3:
     clone-deep "^4.0.1"
     wildcard "^2.0.0"
 
-webpack-ng-dll-plugin@2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/webpack-ng-dll-plugin/-/webpack-ng-dll-plugin-2.1.1.tgz#828af6c5365c58c49dd28370a50e22c0125f506b"
-  integrity sha512-IidtiVtiEWqHlqVUduydEudsxoTMSmTD4A2MfOc7XXFR67wyV5dpy/NIXq4WChR0wHnLTLt/mqNA3NHyeEZNkQ==
+webpack-ng-dll-plugin@2.1.4:
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/webpack-ng-dll-plugin/-/webpack-ng-dll-plugin-2.1.4.tgz#7ab856d6a609aa833526f3698496e3846a773425"
+  integrity sha512-ELtJt66DlEhUukWcKsxmYECHfKuN1HkVyMxOY/0VdmZnRZKZSYxj3zLIDsBKquJU77KnOIflHq9N4vFD9jrumg==
   dependencies:
     cyia-code-util "^1.0.6"
 

@@ -9,7 +9,7 @@ export default (config: webpack.Configuration) => {
   );
   config.module.rules.unshift({
     test: /\.tsx?/,
-    use: 'webpack-ng-dll-plugin/dist/ng-named/loader/ng-named-export.js',
+    use: 'webpack-ng-dll-plugin/dist/ng-named/loader/export',
   });
   return config;
 };
