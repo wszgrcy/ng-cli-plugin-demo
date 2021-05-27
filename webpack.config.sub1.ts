@@ -1,15 +1,20 @@
 import * as webpack from 'webpack';
 import * as path from 'path';
 import {
-  LoadRemoteModulePlugin
+  LoadRemoteModulePlugin, NgNamedImportCheckPlugin
 } from 'webpack-ng-dll-plugin';
 import { BootstrapAssetsPlugin } from 'webpack-bootstrap-assets-plugin';
 
 export default (config: webpack.Configuration, options) => {
-  config.module.rules.unshift({
-    test: new RegExp(path.join(__dirname, 'src')+'.*\\.(js|tsx?)$'),
-    use: 'webpack-ng-dll-plugin/dist/ng-named/loader/import',
-  });
+  config.plugins.push(
+    new webpack.DllReferencePlugin({
+      context: path.resolve(__dirname),
+      manifest: require('./dist/main-manifest.json'),
+    })
+  );
+  config.plugins.push(
+    new NgNamedImportCheckPlugin([path.resolve(__dirname, 'src')])
+  );
   const entry: any = config.entry;
   config.entry = entry.main;
   config.plugins.push(
