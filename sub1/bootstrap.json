@@ -1,0 +1,17 @@
+{
+    "scripts": [
+        {
+            "name": "main",
+            "fileName": "sub1.main.c1df11f5e828d064b05d.js",
+            "defer": "",
+            "src": "/ng-cli-plugin-demo/sub1/sub1.main.c1df11f5e828d064b05d.js"
+        },
+        {
+            "name": "runtime",
+            "fileName": "sub1.runtime.1ea5670d953d4ad3508c.js",
+            "defer": "",
+            "src": "/ng-cli-plugin-demo/sub1/sub1.runtime.1ea5670d953d4ad3508c.js"
+        }
+    ],
+    "stylesheets": []
+}

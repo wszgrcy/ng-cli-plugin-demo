@@ -1,0 +1,2 @@
+(self.webpackChunkng_cli_plugin_demo=self.webpackChunkng_cli_plugin_demo||[]).push([[126],{126:(n,e,l)=>{"use strict";l.r(e),l.d(e,{PRINT_LOG:()=>c});const c="import and console.log"}}]);
+//# sourceMappingURL=126.72919323199202476536.js.map

@@ -1,1 +1,0 @@
-export const PRINT_LOG='import and console.log'
