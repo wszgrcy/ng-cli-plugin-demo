@@ -23,8 +23,7 @@ export default (config: webpack.Configuration, options) => {
       manifest: require('./dist/manifest.json'),
     })
   );
-  config.output.jsonpFunction = 'sub1Jsonp'
-  config.output.filename = 'sub1.[name].[hash:20].js';
+  config.output.filename = 'sub1.[name].[chunkhash:20].js';
   config.plugins.push(new LoadRemoteModulePlugin());
 
   // 不同环境需要不同的部署地址,或者获取到资源清单后手动加部署地址,使加载生效
@@ -32,6 +31,6 @@ export default (config: webpack.Configuration, options) => {
     new BootstrapAssetsPlugin({
       deployUrl: options.deployUrl,
     })
-  )
+  );
   return config;
 };

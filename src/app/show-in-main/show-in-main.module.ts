@@ -8,4 +8,3 @@ import { ShowInMainComponent } from './show-in-main.component';
   exports: [ShowInMainComponent],
 })
 export class ShowInMainModule {}
-exportNgNamed('ShowInMainComponent', ShowInMainComponent);

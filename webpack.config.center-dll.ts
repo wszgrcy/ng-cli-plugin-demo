@@ -4,7 +4,6 @@ import {
   setNgDllPlugin,
   RemoteModuleStartupMainTemplatePlugin,
   RemoteModuleManifestStartupMainTemplatePlugin,
-  NgNamedMainTemplatePlugin,
 } from 'webpack-ng-dll-plugin';
 export default (config: webpack.Configuration, options) => {
   setNgDllPlugin(
@@ -26,7 +25,6 @@ export default (config: webpack.Configuration, options) => {
   );
   config.plugins.push(new RemoteModuleStartupMainTemplatePlugin());
   config.plugins.push(new RemoteModuleManifestStartupMainTemplatePlugin());
-  config.plugins.push(new NgNamedMainTemplatePlugin());
 
   return config;
 };
